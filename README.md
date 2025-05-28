@@ -6,7 +6,7 @@
 ## 🔍 목차
 
 <details>
-<summary>목차 보기</summary>
+<summary>목차 보기 (클릭)</summary>
 
 1. [프로젝트 개요](#프로젝트-개요)  
 2. [기술 스택](#기술-스택)  
