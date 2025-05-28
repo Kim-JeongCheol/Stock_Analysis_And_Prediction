@@ -68,13 +68,13 @@
      ```
      df['volatility'] = df['volatility'].str.extract(r'([\d\.]+)').astype(float)
      ```
-   - 나머지 피처(`close`, `open`, `high`, `low`, `volume`)를 `float`로 변환  
+   - 나머지 피처(`close`, `open`, `high`, `low`, `volume`)를 `float(실수)` 형태로 변환  
      ```
      df[['close','open','high','low','volume']] = df[['close','open','high','low','volume']].astype(float)
      ```
 
 2. **날짜 처리 & 정렬**  
-   - `date`를 `datetime` 타입으로 변환  
+   - `date`를 `datetime(날짜)` 타입으로 변환  
      ```
      df['date'] = pd.to_datetime(df['date'], format='%Y.%m.%d')
      ```
@@ -85,14 +85,14 @@
      ```
 
 3. **스케일링**  
-   - `StandardScaler`로 평균 0, 분산 1로 변환  
+   - `StandardScaler`로 정규화
      ```
      scaler = StandardScaler()
      X_scaled = scaler.fit_transform(df[features].values)
      ```
 
 4. **시퀀스 생성**  
-   - LSTM 입력용 시퀀스 생성 (`seq_len=7`, `pred_steps=1`)  
+   - **시퀀스 생성** (1주일 단위: `seq_len=7`, 다음 날 예측: `pred_steps=1`)
      ```
      X, y = preprocessor.create_sequences(X_scaled, seq_len=7, pred_steps=1)
      ```
