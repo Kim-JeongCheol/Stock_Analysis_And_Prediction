@@ -125,10 +125,15 @@
   | R²   | 0.98       |
   | MAPE | 0.97%        |
 
-- **그래프 예시**
-![학습 손실](images/loss.png) 
-![전체 예측](images/predictions.png)  
-![최근 확대](images/predictions_zoom.png)
+- **그래프**
+- **학습/검증 손실**  
+  ![학습 손실](images/loss.png)  
+
+- **전체 예측**  
+  ![전체 예측](images/predictions.png)  
+
+- **최근 확대**  
+  ![최근 확대](images/predictions_zoom.png)  
 
 - **주요 인사이트**  
   - 평균적으로 실제 시가 대비 **0.97%** 오차 발생 → 매우 높은 정확도  
