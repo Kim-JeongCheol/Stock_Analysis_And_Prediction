@@ -126,8 +126,8 @@
   | MAPE | 0.95%        |
 
 - **그래프 예시**  
-  ![전체 예측](C:\Users\김정철\Desktop\취업 자료\깃허브\Stock_Analysis_And_Prediction\images\predictions_full.png)  
-  ![최근 확대](C:\Users\김정철\Desktop\취업 자료\깃허브\Stock_Analysis_And_Prediction\images/predictions_zoom.png)
+![전체 예측](docs/images/predictions_full.png)  
+![최근 확대](docs/images/predictions_zoom.png)
 
 - **주요 인사이트**  
   - 평균적으로 실제 시가 대비 **0.95%** 오차 발생 → 매우 높은 정확도  
