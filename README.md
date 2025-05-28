@@ -1,7 +1,8 @@
-# Stock Analysis & Prediction
+# Stock Analysis And Prediction
 Web Scrapping과 LSTM을 활용한 주가 예측&분석 프로젝트
 
-## 🔍 목차
+
+## 목차
 
 1. [프로젝트 개요](#-프로젝트-개요)  
 2. [기술 스택](#-기술-스택)  
@@ -17,7 +18,7 @@ Web Scrapping과 LSTM을 활용한 주가 예측&분석 프로젝트
 
 ## 📋 프로젝트 개요
 
-- **목표**: 과거 주가 데이터를 기반으로 다음 날 시가(open price)를 예측  
+- **목표**: 과거의 주가 데이터를 기반으로 다음 날 시가를 예측  
 - **역할**:  
   - 웹 스크래퍼(`scraper`) 개발  
   - 데이터 전처리(`preprocessor`) 파이프라인 설계  
