@@ -41,13 +41,12 @@
 
 ## 🛠 기술 스택
 
-- **Language**: Python 3.8+  
-- **Web Scraping**: `urllib`, `BeautifulSoup`  
-- **Data Processing**: `pandas`, `numpy`, `scikit-learn`  
-- **Modeling**: `tensorflow`/`keras` (LSTM)  
-- **Visualization**: `matplotlib`  
-- **Version Control**: Git, GitHub  
-- **Documentation**: Markdown  
+- **언어**: Python 3.8+  
+- **웹 스크래핑**: urllib (Request, urlopen), BeautifulSoup  
+- **데이터 처리**: pandas, numpy, scikit-learn (StandardScaler)  
+- **모델링**: TensorFlow/Keras (Sequential, LSTM, Dense, Adam)  
+- **모델 평가**: scikit-learn (mean_squared_error, r2_score, mean_absolute_percentage_error)  
+- **시각화**: Matplotlib  
 
 ---
 
