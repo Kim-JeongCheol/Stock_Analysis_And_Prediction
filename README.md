@@ -126,8 +126,8 @@
   | MAPE | 0.95%        |
 
 - **그래프 예시**  
-![전체 예측](docs/images/predictions_full.png)  
-![최근 확대](docs/images/predictions_zoom.png)
+![전체 예측](images/predictions.png)  
+![최근 확대](images/predictions_zoom.png)
 
 - **주요 인사이트**  
   - 평균적으로 실제 시가 대비 **0.95%** 오차 발생 → 매우 높은 정확도  
