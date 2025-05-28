@@ -96,3 +96,20 @@
      ```
      X, y = preprocessor.create_sequences(X_scaled, seq_len=7, pred_steps=1)
      ```
+
+---
+
+## 🧠 모델링
+
+- **하이퍼파라미터**  
+  | 파라미터      | 값    |
+  |---------------|------|
+  | seq_len       | 7    |
+  | batch_size    | 32   |
+  | epochs        | 30   |
+  | learning_rate | 0.01 |
+
+- **학습 코드**  
+  ```python
+  model = LSTMModel(seq_len=7, n_features=X.shape[2], lr=0.01)
+  history = model.train(trainX, trainY, epochs=30, batch_size=32)
