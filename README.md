@@ -9,14 +9,13 @@
 <summary>목차 보기 (클릭)</summary>
 
 1. [프로젝트 개요](#-프로젝트-개요)  
-2. [기술 스택](#-기술-스택)  
-3. [아키텍처](#-아키텍처)  
-4. [데이터](#-데이터)  
-5. [데이터 전처리](#-데이터-전처리)  
-6. [모델링](#-모델링)  
-7. [결과 및 평가](#-결과-및-평가)  
-8. [사용 방법](#-사용-방법)  
-9. [향후 계획](#-향후-계획)  
+2. [기술 스택](#-기술-스택)   
+3. [데이터 수집](#-데이터-수집)  
+4. [데이터 전처리](#-데이터-전처리)  
+5. [모델링](#-모델링)  
+6. [결과 및 평가](#-결과-및-평가)  
+7. [사용 방법](#-사용-방법)  
+8. [향후 계획](#-향후-계획)  
 
 </details>
 
@@ -50,36 +49,7 @@
 
 ---
 
-## 🏗 아키텍처
-
-1. **데이터 수집**
-   - 함수: `scraper.fetch(code, start_page, end_page)`
-   - 네이버 금융 HTML을 파싱하여 날짜 · 종가 · 시가 · 고가 · 저가 · 거래량 데이터 추출
-
-2. **데이터 전처리**
-   - 함수: `preprocessor.process()`
-     - 문자열 정제 (쉼표, `%` 제거) → *float* 변환  
-     - *StandardScaler*로 스케일링  
-     - 날짜 → *datetime* 변환 후 오름차순 정렬  
-   - 함수: `preprocessor.create_sequences(data, seq_len, pred_steps)`
-     - LSTM 입력용 슬라이딩 윈도우 시퀀스 생성
-
-3. **모델링**
-   - 클래스: `LSTMModel`
-     - 64-unit LSTM → 32-unit LSTM → `Dense(1)`  
-     - optimizer=*Adam(lr)*, loss=*'mse'*  
-     - 학습: `train()` 메서드에서 *validation_split*=0.1 적용
-
-4. **시각화**
-   - 함수: `Visualizer.plot_loss(history)`  
-     - 학습/검증 손실 곡선을 *loss.png* 로 저장  
-   - 함수: `Visualizer.plot_predictions(dates, actual, pred, zoom_len)`  
-     - 전체 예측 결과 → *predictions_full.png*  
-     - 최근 N일 확대 결과 → *predictions_zoom.png*
-
----
-
-## 💾 데이터
+## 📊 데이터 수집
 
 - **소스**: 네이버 금융 일별 시세 (`https://finance.naver.com/item/sise_day.naver`)  
 - **형태**:  
@@ -91,7 +61,7 @@
 
 ---
 
-## 🔄 데이터 전처리
+## 🧹 데이터 전처리
 
 1. **문자열 정제**  
    - `volatility`에서 `%` 제거 후 숫자만 추출  
