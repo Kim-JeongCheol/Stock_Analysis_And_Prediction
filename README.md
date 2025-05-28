@@ -52,12 +52,11 @@
 
 ## 🏗 아키텍처
 
-1. **데이터 수집 (Data Collection)**
+1. **데이터 수집**
    - 함수: `scraper.fetch(code, start_page, end_page)`
-   - 네이버 금융 HTML을 파싱하여  
-     · 날짜 · 종가 · 시가 · 고가 · 저가 · 거래량 정보 추출
+   - 네이버 금융 HTML을 파싱하여 날짜 · 종가 · 시가 · 고가 · 저가 · 거래량 데이터 추출
 
-2. **데이터 전처리 (Data Preprocessing)**
+2. **데이터 전처리**
    - 함수: `preprocessor.process()`
      - 문자열 정제 (쉼표, `%` 제거) → *float* 변환  
      - *StandardScaler*로 스케일링  
@@ -65,13 +64,13 @@
    - 함수: `preprocessor.create_sequences(data, seq_len, pred_steps)`
      - LSTM 입력용 슬라이딩 윈도우 시퀀스 생성
 
-3. **모델링 (Modeling)**
+3. **데이터 모델링**
    - 클래스: `LSTMModel`
      - 64-unit LSTM → 32-unit LSTM → `Dense(1)`  
      - optimizer=*Adam(lr)*, loss=*'mse'*  
      - 학습: `train()` 메서드에서 *validation_split*=0.1 적용
 
-4. **결과 시각화 (Visualization)**
+4. **시각화**
    - 함수: `Visualizer.plot_loss(history)`  
      - 학습/검증 손실 곡선을 *loss.png* 로 저장  
    - 함수: `Visualizer.plot_predictions(dates, actual, pred, zoom_len)`  
