@@ -1,6 +1,8 @@
 # Stock Analysis And Prediction
 웹 스크래핑과 LSTM을 활용한 주가 예측&분석 프로젝트
 
+---
+
 ## 🔍 목차
 
 <details open>
