@@ -111,5 +111,5 @@
 
 - **학습 코드**  
   ```python
-  model = LSTMModel(seq_len=7, n_features=X.shape[2], lr=0.01)
-  history = model.train(trainX, trainY, epochs=30, batch_size=32)
+  model = LSTMModel(seq_len = 7, n_features = X.shape[2], lr = 0.01)
+  history = model.train(trainX, trainY, epochs = 30, batch_size = 32)
