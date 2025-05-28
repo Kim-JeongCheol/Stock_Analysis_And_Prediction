@@ -12,7 +12,7 @@
 2. [기술 스택](#기술-스택)  
 3. [아키텍처](#아키텍처)  
 4. [데이터](#데이터)  
-5. [전처리](#전처리)  
+5. [데이터 전처리](#데이터-전처리)  
 6. [모델링](#모델링)  
 7. [결과 및 평가](#결과-및-평가)  
 8. [사용 방법](#사용-방법)  
@@ -43,7 +43,7 @@
 
 - **언어**: Python 3.8+  
 - **웹 스크래핑**: urllib (*Request*, *urlopen*), BeautifulSoup  
-- **데이터 처리**: pandas, numpy, scikit-learn (*StandardScaler*)  
+- **데이터 전처리**: pandas, numpy, scikit-learn (*StandardScaler*)  
 - **모델링**: TensorFlow/Keras (*Sequential*, *LSTM*, *Dense*, *Adam*)  
 - **모델 평가**: scikit-learn (*mean_squared_error*, *r2_score*, *mean_absolute_percentage_error*)  
 - **시각화**: Matplotlib 
@@ -64,7 +64,7 @@
    - 함수: `preprocessor.create_sequences(data, seq_len, pred_steps)`
      - LSTM 입력용 슬라이딩 윈도우 시퀀스 생성
 
-3. **데이터 모델링**
+3. **모델링**
    - 클래스: `LSTMModel`
      - 64-unit LSTM → 32-unit LSTM → `Dense(1)`  
      - optimizer=*Adam(lr)*, loss=*'mse'*  
@@ -91,7 +91,7 @@
 
 ---
 
-## 🔄 전처리
+## 🔄 데이터 전처리
 
 1. **문자열 정제**  
    ```python
