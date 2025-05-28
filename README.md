@@ -92,7 +92,7 @@
      ```
 
 4. **시퀀스 생성**  
-   - **시퀀스 생성** (1주일 단위: `seq_len=7`, 다음 날 예측: `pred_steps=1`)
+   - **시퀀스 생성** (1주일 단위: `seq_len = 7`, 다음 날 예측: `pred_steps = 1`)
      ```
      X, y = preprocessor.create_sequences(X_scaled, seq_len=7, pred_steps=1)
      ```
