@@ -114,7 +114,7 @@
   model = LSTMModel(seq_len = 7, n_features = X.shape[2], lr = 0.01)
   history = model.train(trainX, trainY, epochs = 30, batch_size = 32)
 
---
+---
 
 ## 📊 결과 및 평가
 
@@ -125,7 +125,8 @@
   | R²   | 0.98       |
   | MAPE | 0.97%        |
 
-- **그래프 예시**  
+- **그래프 예시**
+![학습 손실](images/loss.png) 
 ![전체 예측](images/predictions.png)  
 ![최근 확대](images/predictions_zoom.png)
 
