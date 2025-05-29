@@ -99,7 +99,7 @@
      X, y = preprocessor.create_sequences(X_scaled, seq_len = 7, pred_steps = 1)
      ```
      
-**전처리 후 데이터 모습 (첫 5행)**
+**전처리 후 데이터셋의 모습 (첫 5행)**
 
 | date       |   close   | volatility |    open   |    high   |     low    |     volume    |
 |------------|-----------|------------|-----------|-----------|------------|---------------|
