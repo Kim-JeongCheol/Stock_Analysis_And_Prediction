@@ -86,12 +86,19 @@
      scaler = StandardScaler()
      X_scaled = scaler.fit_transform(df[features].values)
      ```
+4. **데이터 분할**
+   - 전체 데이터의 **70%**를 학습용 데이터로, **30%**를 테스트용 데이터로 분할
+   ```python
+   n_train  = int(len(df) * 0.7)
+   train_df = df.iloc[:n_train]
+   test_df  = df.iloc[n_train:]
 
-4. **시퀀스 생성**  
+5. **시퀀스 생성**  
    - **시퀀스 생성** (7 거래일 단위: `seq_len = 7`, 다음 날 예측: `pred_steps = 1`)
      ```
      X, y = preprocessor.create_sequences(X_scaled, seq_len=7, pred_steps=1)
      ```
+6. 
 
 ---
 
