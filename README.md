@@ -53,7 +53,7 @@
 
 - **소스**: 네이버 금융 일별 시세 (`https://finance.naver.com/item/sise_day.naver`)  
 - **형태**:
-  ![네이버 주가](images/naver_stock.png)   
+  ![네이버 주가](images/naver_stock.PNG)   
 
 ---
 
