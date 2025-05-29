@@ -94,7 +94,7 @@
    test_df  = df.iloc[n_train:]
 
 5. **시퀀스 생성**  
-   - 7 거래일 단위('seq_len = 7')로 다음 날 예측('pred_steps=1'):
+   - 7 거래일 단위(`seq_len = 7`)로 다음 날 예측(`pred_steps = 1`):
      ```
      X, y = preprocessor.create_sequences(X_scaled, seq_len = 7, pred_steps = 1)
      ```
